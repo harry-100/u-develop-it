@@ -45,7 +45,7 @@ router.get('/candidate/:id', (req, res) => {
 });
 
 // Query to delete a candidate - ? is a placeholder for passing arguments
-router.delete('/candidates/:id', (req, res) => {
+router.delete('/candidate/:id', (req, res) => {
     const sql = `DELETE FROM candidates WHERE id = ?`;
     params = [req.params.id];
     db.query(sql, params, (err, result) => {
